@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persmisos</title>
+<!--- Titulo Permisos-->
+<!--- Entrada Introdicir el codigo de permiso -->
+<!--- Salida Identifica si el numero introducido es correcto o no-->
+<!--- Proceso al intoducir el número idintifica si la contraseña es correcta-->
+
+</head>
+<body>
+    <h1>Determinar permisos</h1>
+    <label for="codigo">Ingrese el codijo de acceso:</label>
+    <input type="password" id="codigo">
+    <button onclick="verificarpermisos()">Verificar</button>
+    <p id="resultado"></p>
+
+    <script>
+        function verificarpermisos() {
+            const codigo = document.getElementById('codigo').value;
+            const resultado = document.getElementById('resultado');
+            const codigoAdmin = '9876'; 
+
+            if (codigo === codigoAdmin) 
+            {resultado.textContent = `Permisos de administrador concedido.`;} 
+            else {resultado.textContent = `Codigo incorrecto, acceso no concedido.`;}
+// ...existing code...
+        }
+        
+          
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperatura de Congelación</title>
+<!--- Titulo Verificar temperatura de congelación-->
+<!--- Entrada Introdicir la temperatura en °C -->   
+<!--- Salida Identifica si la temperatura es adecuada para congelación-->
+<!--- Proceso al intoducir la temperatura idintifica si es adecuada para congelación--> 
+</head>
+<body>
+    <h1>Verificar temperatura de congelación</h1>
+    <label for="temperatura">Ingresa la temperatura en °C:</label>
+    <input type="number" id="temperatura">
+    <button onclick="verificarTemperatura()">Verificar</button>
+    <p id="resultado"></p>
+
+    <script>
+        function verificarTemperatura() {
+            const temperatura = document.getElementById('temperatura').value;
+            const resultado = document.getElementById('resultado');
+
+            if (temperatura <= 0) 
+            {resultado.textContent = `La temperatura ${temperatura}°C es adecuada para congelación.`;} 
+            else {resultado.textContent = `La temperatura ${temperatura}°C no es adecuada para congelación.`; }
+        }
+    </script>
+</body>
+</html>

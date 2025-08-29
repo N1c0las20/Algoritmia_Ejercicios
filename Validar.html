@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!--- Titulo Validar acceso-->
+<!--- Entrada Introdicir el usuario -->     
+<!--- Salida Identifica si el usuario es correcto-->
+<!--- Proceso al intoducir el usuario idintifica si es correcto-->
+</head>
+<body>
+    <h1>Validar acceso</h1>
+    <label for="usuario">Ingrese su usuario:</label>
+    <input type="text" id="usuario">
+    <button onclick="validaracceso()">Ingresar</button>
+    <p id="resultado"></p>
+
+
+    <script>
+        function validaracceso() 
+        {
+            const Usuario = document.getElementById('usuario').value;  
+            const resultado = document.getElementById('resultado');
+
+            if (Usuario === 'admin') 
+            {resultado.textContent = `Permisos concedido.`;}
+            else {resultado.textContent = `Acceson incorrecto, acceso no concedido.`;}
+
+        }
+    </script>
+            
+</body>
+</html>

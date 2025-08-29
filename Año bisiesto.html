@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Añobisiesto</title>
+<!--- Titulo Año bisiesto-->
+<!--- Entrada Introdicir el año -->
+<!--- Salida Identifica el año-->
+<!--- Proceso al intoducir el año idintifica si es un año bisiesto o no-->
+</head>
+<body>
+    <h1>Comprobar si es año bisiesto</h1>
+    <label for="anio">Ingresa un año</label>
+    <input type="number" id="anio">
+    <!-- ...existing code... -->
+    <button onclick="comprobarBisiesto()">Comprobar</button>
+    <!-- ...existing code... -->
+    <p id="resultado"></p>
+
+    <script>
+        function  comprobarBisiesto() {
+            const anio = document.getElementById('anio').value;
+            const resultado = document.getElementById('resultado');
+
+            if ((anio % 4 === 0 && anio % 100 !== 0) || anio % 400 === 0)
+            { resultado.textContent = `El año ${anio} es bisiesto.`;}
+            else {resultado.textContent = `El año ${anio} no es bisiesto.`;}
+            
+        }
+    </script>
+</body>
+</html>

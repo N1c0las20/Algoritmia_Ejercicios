@@ -1,0 +1,30 @@
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nota de Estudiante</title>
+<!--- Titulo Nota de Estudiante-->
+<!--- Entrada Introdicir la nota del estudiante -->
+<!--- Salida Identifica si el estudiante aprobó o reprobó-->    
+<!--- Proceso al intoducir la nota del estudiante idintifica si aprobó o reprobó--> 
+</head>
+<body>
+    <h1>Identificar si un estudiante aprobó o reprobó</h1>
+    <label for="nota">Ingresa la nota del estudiante:</label>
+    <input type="number" id="nota">
+    <button onclick="verificarNota()">Verificar</button>
+    <p id="resultado"></p>
+
+    <script>
+        function verificarNota() {
+            const nota = document.getElementById('nota').value;
+            const resultado = document.getElementById('resultado');
+
+            if (nota >= 60) 
+            {resultado.textContent = `¡Aprobado!`;} 
+            else {resultado.textContent = `Reprobado.`;}
+        }
+    </script>
+</body>
+</html>
